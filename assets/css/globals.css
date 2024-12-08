@@ -1,0 +1,457 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+  /* Initial state: hidden */
+  .animated {
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards; /* Apply fade-in animation */
+  }
+
+  /* Fade-in keyframes */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+::var {
+    --primary-color: #FAF0E6;
+    --secondary-color: #D4ADFC;
+    --font-primary: 'Poppins';
+    --font-secondary: 'Dancing Script';
+}
+.animasideskripsi {
+    opacity: 0;
+    transform: translateY(30px); /* Move it slightly down */
+    animation: fadeUp 1.5s ease-out forwards;
+  }
+
+  /* Fade-in and upward movement animation */
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+body,html {
+    background-color: #01000E;
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.menu .brand a {
+     font-family: "Josefin Sans", sans-serif;
+     font-size: 23px;
+     color: #FAF0E6;
+}
+
+.content-of-hero {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    background-image: url(../img/Cool-Billiards-Background.jpg);
+    background-position: center;
+    background-size: cover;
+    flex-direction: row;
+}
+
+.content-of-hero .menu {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px auto;
+    gap: 20px;
+    width: auto;
+    border-top: 2px solid #F5E8C7;
+    border-bottom: 2px solid #F5E8C7;
+    padding: 15px;
+    align-items: center;
+}
+
+.nav-menu .menu > li > a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #FAF0E6;
+    margin-top: 20px;
+    transition: all 300ms ease-in-out ;
+}
+
+.nav-menu .menu > li > a:hover {
+    color: #D4ADFC;
+    font-size: 18px;
+}
+
+
+.txt-of-hero {
+    position: absolute;
+    margin: auto;
+    top: 400px;
+   text-align: center;
+}
+
+.txt-of-hero span {
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.txt-of-hero-2 {
+    position: absolute;
+    margin: 50px auto;
+    top: 500px;
+    width: 40%;
+    text-align: center;
+}
+
+.txt-of-hero p {
+    font-family: 'Dancing Script';
+    font-size: 6em;
+    color: black;
+    font-weight: 700;
+}
+
+.txt-of-hero-2 p {
+    font-family: 'Poppins';
+    font-size: 20px;
+    color: #ffffff;
+}
+
+#section-1 {
+    background-color: #01000E;
+}
+
+.fancy {
+  position: relative;
+  white-space: nowrap;
+  &:after {
+    --deco-height: 0.3125em;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(var(--deco-height) * -0.625);
+    height: var(--deco-height);
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M-17 30.5C-1 22 72-4 54 13 37.9 28.2-2.5 57.5 16 55.5s72-29 104-40' stroke='%2300FDCF' stroke-width='10'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h100v64H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    background-size: auto 100%;
+    background-repeat: round;
+    background-position: 0em;
+  }
+}
+
+#section-1 p{
+    font-family: 'Dancing Script';
+    text-align: center;
+    font-size: 5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    color: #fff;
+}
+
+#section-1 .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+#section-1 .wrapper img {
+    flex: 1 1 auto;
+    width: calc(100% / 3.5);
+    height: auto;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.wrapper img {
+  transition: transform .2s;
+}
+
+.wrapper img:hover {
+  transform: scale(1.1);
+  border-radius: 10px;
+}
+
+#section-2 {
+    height: 100vh;
+    margin-top: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    background-color: #03001C;
+    background-image: url(../img/milad-fakurian-u8Jn2rzYIps-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode:multiply;
+}
+
+#section-2 h2 {
+    font-family: 'Dancing Script';
+    font-size: 4em;
+}
+
+.card > h2 {
+    font-family: var(--font-primary);
+}
+
+.card-container {
+    display: flex;
+    padding: 5%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding: 12px;
+    gap: 20px;
+    width: 300px;
+    border-radius: 20px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 13px;
+    transition: all 300ms ease-in-out;
+    color: #fff;
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+border: 1px solid #fff;
+
+}
+
+.card:hover {
+    background-color: #faf0e648;
+    transform: scale(1.1);
+}
+
+.card button {
+    background: none;
+    outline: none;
+    border: 2px solid black;
+    padding: 12px;
+    width: 200px;
+    margin: 20px auto;
+    border-radius: 12px;
+    transition: all 200ms ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card button a {
+    margin-right: 5px;
+    color: #fff;
+    font-family: 'Poppins';
+}
+
+.card button :hover {
+    color: #000;
+}
+
+.card button:hover{
+    background: rgb(0,253,207);
+    color: #000;
+}
+
+.card p {
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.card svg {
+    margin-right: 10px;
+}
+
+#section-contact {
+    height: 100vh;
+    margin: auto;
+    background-color: #01000E;
+}
+
+.wrapper-contact {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.contact-content {
+    margin-top: 12em;
+}
+
+.email-telephone p {
+    font-family: 'Poppins';
+    color: #fff;
+}
+
+.email-telephone svg {
+    margin-right: 15px;
+}
+
+.email-telephone p iframe {
+    border-radius: 20px;
+    margin-top: 12px;
+}
+
+.for-tablet-resolution lord-icon {
+    display: none;
+}
+
+.line-bottom {
+    background-color: #F5E8C7;
+    height: 2px;
+    width:40%;
+    margin: auto;
+}
+
+.foot {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+}
+
+.foot p {
+    color: #F5E8C7;
+    font-family: 'Poppins';
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+@media only screen and (max-width: 550px) {
+
+    .content-of-hero {
+        height: 100vh;
+    }
+
+    .content-of-hero .menu {
+        width: 80%;
+        font-size: 13px;
+    }
+
+    .menu ul > li >.brand a{
+        font-size: 12px;
+    }
+    .txt-of-hero p {
+        font-size: 30px;
+    }
+
+    .txt-of-hero {
+        top: 300px;
+    }
+
+    .txt-of-hero-2 {
+        top: 360px;
+        text-align: center;
+        margin: auto;
+        padding: 0;
+        width: 90%;
+    }
+
+    .txt-of-hero-2 p {
+        width: 200px;
+        margin: auto;
+        font-size: 15px;
+    }
+
+    #section-2 {
+        height: auto;
+        margin-top: 120px;
+    }
+
+    .card-container {
+        margin-top: 40px;
+    }
+
+    #section-contact {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15pc;
+        justify-content: center;
+        margin: auto;
+        height: auto;
+        padding: 12px;
+    }
+
+    .email-telephone p iframe {
+        width: 95%;
+    }
+
+    .contact-content lord-icon {
+        display: none;
+    }
+
+    .contact-content .txt-msg p {
+        font-size: 40px;
+    }
+}
+
+@media (min-width:570px) and (max-width: 990px) {
+
+    .txt-of-hero {
+        font-size: 10px;
+    }
+
+    .txt-of-hero-2 p {
+        width: 350px;
+        font-size: 20px;
+    }
+
+    #section-2 {
+        height: auto;
+        margin-top: 120px;
+    }
+    #section-contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 75vh;
+    }
+
+    .contact-content {
+        margin: auto;
+    }
+
+    .contact-content lord-icon {
+        display: none;
+    }
+
+    .for-tablet-resolution lord-icon {
+        display: block;
+    }
+
+}
+
+@media (min-width:991px) and (max-width: 1000px) {
+    .contact-content {
+        flex-wrap: nowrap;
+    }   
+}
